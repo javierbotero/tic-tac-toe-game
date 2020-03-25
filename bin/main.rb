@@ -21,20 +21,35 @@ while true
   9.times do |number|
     if number.even?
       puts "please #{player1} choose the square that you want to put your mark in:"
-      user_choice = gets.chomp
-      puts "treat player1 choice"
+      while true
+        user_choice = gets.chomp
+        user_choice = user_choice.to_i          
+        if user_choice < 10 && user_choice > 0
+          puts "treat player1 choice"
+          break
+        else
+          puts "Select a number between 1 and 9"
+        end
+      end
       puts "show the boarder"
     else
-      puts "please #{player2} choose the square that you want to put your mark in:"
-      user_choice = gets.chomp
-      puts "treat player2 choice"
-      puts "show the boarder"
+      puts "please #{player2} choose the square that you want to put your mark in:"      
+      while true
+        user_choice = gets.chomp
+        if user_choice.is_a? Integer && user_choice < 10 && user_choice > 0
+          puts "treat player2 choice"
+          break
+        else
+          puts "Select a number between 1 and 9"
+        end    
+      end
+      puts "show the board"
     end
 
-    puts "check for the winner if so print it"
+    # check for the winner if so print it
   end
 
-  puts "if there is no winner print no winner for now foolks"
+  # if there is no winner print no winner for now foolks
   
   answer = nil
 
@@ -44,6 +59,8 @@ while true
 
     if answer == 'Y' || answer == 'N' || answer == 'y' || answer == 'n'
       break
+    else
+      puts "Wrong input you must choose Y or N"
     end
   end
 
