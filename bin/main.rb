@@ -45,7 +45,10 @@ def play_again
 end
 
 def no_winner?(game)
-  9.times do |number|
+  game_on = true
+  number = 0
+
+  while game_on
     if number.even?
       user_input(game.player_x, game)
     else
@@ -57,11 +60,14 @@ def no_winner?(game)
     if game.winner
       puts "#{game.winner == 'X' ? game.player_x : game.player_o} is the winner"
 
-      return false
+      game_on = false
     end
+
+    game_on = false if number == 8
+    number += 1
   end
 
-  true
+  game_on
 end
 
 def init
