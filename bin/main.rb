@@ -24,15 +24,33 @@ def play_again
   loop do
     puts 'do you want to play again?(Y/N)'
     answer = gets.chomp
+    arr = %w[Y y N n]
+    break if arr.include?(answer)
 
-    if answer == 'Y' || answer == 'N' || answer == 'y' || answer == 'n'
-      break
-    else
-      puts 'Wrong input you must choose Y or N'
-    end
+    puts 'Wrong input you must choose Y or N'
   end
 
   answer
+end
+
+def game(player1, player2)
+  9.times do |number|
+    if number.even?
+      user_input(player1)
+
+      # show the board
+      puts '------------ Board ----------'
+    else
+      user_input(player2)
+
+      # show the board
+      puts '---------- Board -----------'
+    end
+
+    # check for the winner if so print it
+    # puts "#{player1} is the winner" if false
+  end
+  true
 end
 
 def init
@@ -48,35 +66,18 @@ def init
     puts '----- this is how you can select your square ------'
     puts 'basically just by choosing the square number'
 
-    puts '| 1 | 2 | 3 |\n-------------\n| 4 | 5 | 6 |\n-------------\n| 7 | 8 | 9 |'
+    puts "| 1 | 2 | 3 |\n-------------\n| 4 | 5 | 6 |\n-------------\n| 7 | 8 | 9 |"
 
     puts '-------- Board --------'
-    puts '|   |   |   |\n-------------\n|   |   |   |\n-------------\n|   |   |   |'
+    puts "|   |   |   |\n-------------\n|   |   |   |\n-------------\n|   |   |   |"
 
-    9.times do |number|
-      if number.even?
-        user_choice = user_input(player1)
+    no_winner = game(player1, player2)
 
-        # show the board
-        puts '------------ Board ----------'
-      else
-        user_choice = user_input(player2)
-
-        # show the board
-        puts '---------- Board -----------'
-      end
-
-      # check for the winner if so print it
-      # puts "#{player1} is the winner" if false
-    end
-
-    puts 'no winner for now foolks' if true
+    puts 'no winner for now foolks' if no_winner
 
     answer = play_again
 
-    if answer == 'N' || answer == 'n'
-      break
-    end
+    break if %w[N n].include?(answer)
   end
 end
 
