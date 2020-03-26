@@ -14,6 +14,8 @@ class TicTacToe
     @board[index - 1] = player == @player_x ? 'X' : 'O'
   end
 
+  # rubocop:disable Metrics/CyclomaticComplexity
+  # rubocop:disable Metrics/PerceivedComplexity
   def winner
     index = 0
 
@@ -34,3 +36,5 @@ class TicTacToe
     false
   end
 end
+# rubocop:enable Metrics/CyclomaticComplexity
+# rubocop:enable Metrics/PerceivedComplexity
