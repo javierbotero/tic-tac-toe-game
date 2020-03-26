@@ -1,55 +1,54 @@
 # Tic Tac Toe
 
-> This is a Tic Tac toe game build with Ruby by Me and my partner Zakariae El Mejdki
-
-Additional description about the project and its features.
+> This is a Tic Tac Toe game build with Ruby by Me and my partner Zakariae El Mejdki. 
 
 ## Built With
 
-- Major languages,
-- frameworks,
-- technologies used
+- Ruby
+
 
 ## Live Demo
 
 [Live Demo Link](https://livedemo.com)
 
+## Rules
+
+**The main idea of the game is to complete a line horizontally, vertically or cross over the table**
+**There are two players one should start with O mark another with the X mark**
+**The player that fills the entire line with their mark wins!** 
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+**After having downloaded the files it is neccesary two steps, open the terminal and type**
 
+```ruby
+./bin/main.rb in the command line**
+```
+**be aware that this game can be run just in unix based machines.** 
 
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
+### Fork the project from github
 
-### Setup
+### Make sure you have installed [Ruby](https://www.theodinproject.com/courses/web-development-101/lessons/installing-ruby)
 
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
+### Being inside the folder where the project is downloaded run the command ./lib/main.rb
 
 
 
 ## Authors
 
-👤 **Author1**
+👤 **Zakariae El Mejdki**
 
-- Github: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- Linkedin: [linkedin](https://linkedin.com/linkedinhandle)
+- Github: [@elmejdki](https://github.com/elmejdki)
+- Twitter: [Zakariae El Mejdki](https://twitter.com/0ca7848f87ab470)
+- Linkedin: [Zakariae El Mejdki](https://www.linkedin.com/in/zakariae-el-mejdki-644898139/)
 
-👤 **Author2**
+👤 **Javier Botero**
 
-- Github: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- Linkedin: [linkedin](https://linkedin.com/linkedinhandle)
+- Github: [@githubhandle](https://github.com/javierbotero)
+- Twitter: [@twitterhandle](https://twitter.com/JavierBotero1)
+- Linkedin: [linkedin](https://www.linkedin.com/in/javier-botero-044686155/)
 
 ## 🤝 Contributing
 
