@@ -20,13 +20,13 @@ end
 
 def display_board(game)
   puts '-------- Board --------'
-  
+
   print '|'
   game.board.each_with_index do |value, index|
-    print "\n-------------\n|" if [3,6].include?(index)
+    print "\n-------------\n|" if [3, 6].include?(index)
     print " #{value.empty? ? ' ' : value} |"
   end
-  puts ""
+  puts ''
 end
 
 def play_again
@@ -36,11 +36,9 @@ def play_again
     puts 'do you want to play again?(Y/N)'
     answer = gets.chomp
 
-    if answer == 'Y' || answer == 'N' || answer == 'y' || answer == 'n'
-      break
-    else
-      puts 'Wrong input you must choose Y or N'
-    end
+    break if %w[Y y N n].include?(answer)
+
+    puts 'Wrong input you must choose Y or N'
   end
 
   answer
@@ -57,7 +55,7 @@ def no_winner?(game)
     display_board(game)
 
     if game.winner
-      puts "#{ game.winner == "X" ? game.player_x : game.player_o} is the winner"
+      puts "#{game.winner == 'X' ? game.player_x : game.player_o} is the winner"
 
       return false
     end
