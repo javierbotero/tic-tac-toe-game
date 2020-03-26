@@ -1,41 +1,41 @@
 # Tic Tac Toe
 
-> This is a Tic Tac Toe game build with Ruby by Me and my partner Zakariae El Mejdki. 
+> This is a Tic Tac Toe game build with Ruby by Me and my partner Zakariae El Mejdki.
+
+Rules of the game:
+
+1. The main idea of the game is to complete a line horizontally, vertically or cross over the table
+2. There are two players one should start with O mark another with the X mark
+3. The player that fills the entire line with their mark wins!
+
+## From the Odin Project
+
+*Link to the [requirements](https://www.theodinproject.com/courses/ruby-programming/lessons/oop) in the Odin Project*
 
 ## Built With
 
 - Ruby
+- Rubocop
 
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
-
-## Rules
-
-**The main idea of the game is to complete a line horizontally, vertically or cross over the table**
-**There are two players one should start with O mark another with the X mark**
-**The player that fills the entire line with their mark wins!** 
+[![repl.it](https://camo.githubusercontent.com/88adba2fff35b16ceafadcaa07f50d5d1978e663/68747470733a2f2f7265706c2e69742f62616467652f6769746875622f6e726971753332322f7469632d7461632d746f65)](https://livedemo.com)
 
 ## Getting Started
 
-**After having downloaded the files it is neccesary two steps, open the terminal and type**
-
-```ruby
-./bin/main.rb in the command line**
-```
-**be aware that this game can be run just in unix based machines.** 
+**be aware that this game can be run just in UNIX based machines.** 
 
 To get a local copy up and running follow these simple example steps.
 
-### Fork the project from github
+1. Fork the project from github
 
-### Make sure you have installed [Ruby](https://www.theodinproject.com/courses/web-development-101/lessons/installing-ruby)
+2. Make sure you have installed [Ruby
+3. After having downloaded the files it is necessary open the terminal and type the next command in order to run the program:
 
-### Being inside the folder where the project is downloaded run the command ./lib/main.rb
-
-
-
+```ruby
+./bin/main.rb
+```
 ## Authors
 
 👤 **Zakariae El Mejdki**
@@ -44,11 +44,13 @@ To get a local copy up and running follow these simple example steps.
 - Twitter: [Zakariae El Mejdki](https://twitter.com/0ca7848f87ab470)
 - Linkedin: [Zakariae El Mejdki](https://www.linkedin.com/in/zakariae-el-mejdki-644898139/)
 
+
+
 👤 **Javier Botero**
 
-- Github: [@githubhandle](https://github.com/javierbotero)
-- Twitter: [@twitterhandle](https://twitter.com/JavierBotero1)
-- Linkedin: [linkedin](https://www.linkedin.com/in/javier-botero-044686155/)
+- Github: [@javierbotero](/github.com/javierbotero)
+- Twitter: [@javierbotero1](https://twitter.com/JavierBotero1)
+- Linkedin: [Javier Botero](https://www.linkedin.com/in/javier-botero-044686155/)
 
 ## 🤝 Contributing
 
