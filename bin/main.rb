@@ -65,7 +65,7 @@ def no_winner?(game, p1, p2)
       game_on = false
     end
 
-    game_on = false if number == 8
+    return game_on if number == 8
     number += 1
   end
 

@@ -13,20 +13,24 @@ class Board
 
   # rubocop:disable Metrics/CyclomaticComplexity
   # rubocop:disable Metrics/PerceivedComplexity
+
   def winner
     i = 0
 
     while i < @board.length
-      if @board[i] == @board[i + 1] && @board[i + 1] == @board[i + 2]
-        return @board[i] unless @board[i].empty?
-      elsif @board[i] == @board[i + 3] && @board[i + 3] == @board[i + 6]
+      row_check = @board[i] == @board[i + 1] && @board[i + 1] == @board[i + 2]
+      column_check = @board[i] == @board[i + 3] && @board[i + 3] == @board[i + 6]
+
+      if row_check || column_check
         return @board[i] unless @board[i].empty?
       end
-
       i += 3
     end
 
-    if (@board[0] == @board[4] && @board[4] == @board[8]) || (@board[2] == @board[4] && @board[4] == @board[6])
+    back_diagonal = @board[0] == @board[4] && @board[4] == @board[8]
+    forward_diagonal = @board[2] == @board[4] && @board[4] == @board[6]
+
+    if back_diagonal || forward_diagonal
       return @board[4] unless @board[4].empty?
     end
 
