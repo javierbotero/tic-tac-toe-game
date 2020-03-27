@@ -1,5 +1,5 @@
 class Player
-  attr_accessor :name, :symbol, :score
+  attr_reader :name, :symbol, :score
 
   def initialize(name, symbol)
     raise ArgumentError, 'you can\'t have an Integer as name' if name.match(/^[0-9]+$/)
