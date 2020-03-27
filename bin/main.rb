@@ -45,40 +45,41 @@ def play_again
   answer
 end
 
-def no_winner?(game, p1, p2)
+def no_winner?(game, player_x, player_o)
   game_on = true
   number = 0
 
   while game_on
     if number.even?
-      user_input(p1, game)
+      user_input(player_x, game)
     else
-      user_input(p2, game)
+      user_input(player_o, game)
     end
 
     display_board(game)
 
     winner = game.winner
     if winner
-      puts winner == p1.symbol ? display_score(p1, p2) : display_score(p2, p1)
+      puts winner == player_x.symbol ? display_score(player_x, player_o) : display_score(player_o, player_x)
 
       game_on = false
     end
 
     return game_on if number == 8
+
     number += 1
   end
 
   game_on
 end
 
-def display_score(p1, p2)
-  p1.inc_score
-  %( 
-#{p1.name} is the winner
+def display_score(player_x, player_o)
+  player_x.inc_score
+  %(
+#{player_x.name} is the winner
 ---- Scores ----
-#{p1.name}: #{p1.score} wins
-#{p2.name}: #{p2.score} wins
+#{player_x.name}: #{player_x.score} wins
+#{player_o.name}: #{player_o.score} wins
   )
 end
 
@@ -101,7 +102,7 @@ def build_player(symbol, compared_player = false)
     end
   end
 
-  player if player
+  player
 end
 
 def init
