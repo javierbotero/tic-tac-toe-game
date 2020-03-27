@@ -17,13 +17,13 @@ class TicTacToe
   # rubocop:disable Metrics/CyclomaticComplexity
   # rubocop:disable Metrics/PerceivedComplexity
   def winner
-    index = 0
+    i = 0
 
-    while index < 9
+    while i < 9
       if @board[i] == @board[i + 1] && @board[i + 1] == @board[i + 2]
-        return @board[i] unless @board[0].empty?
+        return @board[i] unless @board[i].empty?
       elsif @board[i] == @board[i + 3] && @board[i + 3] == @board[i + 6]
-        return @board[0] unless @board[0].empty?
+        return @board[i] unless @board[i].empty?
       end
 
       i += 3
