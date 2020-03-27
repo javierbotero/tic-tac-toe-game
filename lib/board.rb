@@ -1,17 +1,14 @@
-class TicTacToe
-  attr_accessor :player_x, :player_o
+class Board
   attr_reader :board
 
-  def initialize(player1, player2)
-    @player_x = player1
-    @player_o = player2
+  def initialize
     @board = ['', '', '', '', '', '', '', '', '']
   end
 
-  def add_marker(player, index)
+  def add_marker(symbol, index)
     raise ArgumentError, 'Error: Square already filled, try again' unless @board[index - 1].empty?
 
-    @board[index - 1] = player == @player_x ? 'X' : 'O'
+    @board[index - 1] = symbol
   end
 
   # rubocop:disable Metrics/CyclomaticComplexity
@@ -19,7 +16,7 @@ class TicTacToe
   def winner
     i = 0
 
-    while i < 9
+    while i < @board.length
       if @board[i] == @board[i + 1] && @board[i + 1] == @board[i + 2]
         return @board[i] unless @board[i].empty?
       elsif @board[i] == @board[i + 3] && @board[i + 3] == @board[i + 6]
