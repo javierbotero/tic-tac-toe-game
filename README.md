@@ -33,9 +33,12 @@ In order to start the game in your local machine you will need to follow this st
 ```tex
 git clone https://github.com/javierbotero/tic-tac-toe-game.git
 ```
-
-1. Make sure you have already installed [Ruby](https://www.theodinproject.com/courses/web-development-101/lessons/installing-ruby),
-2. After cloning the project open the command line and navigate to the cloned folder to run the game by the following command:
+2. Make sure you have already installed [Ruby](https://www.theodinproject.com/courses/web-development-101/lessons/installing-ruby),
+3. After cloning the project open the command line and navigate to the cloned folder
+```tex
+cd tic-tac-toe-game
+```
+4. Then run the game by the following command:
 
 ```tex
 ./bin/main.rb
