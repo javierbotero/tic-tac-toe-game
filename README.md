@@ -22,20 +22,25 @@ Rules of the game:
 
 [![repl.it](https://camo.githubusercontent.com/88adba2fff35b16ceafadcaa07f50d5d1978e663/68747470733a2f2f7265706c2e69742f62616467652f6769746875622f6e726971753332322f7469632d7461632d746f65)](https://livedemo.com)
 
-## Getting Started
+## How to Start the game
 
 **be aware that this game can be run just in UNIX based machines.** 
 
-To get a local copy up and running follow these simple example steps.
+In order to start the game in your local machine you will need to follow this steps:
 
-1. Fork the project from github
+1. Clone the repository in your machine by running the following command in your terminal:
 
-2. Make sure you have installed [Ruby
-3. After having downloaded the files it is necessary open the terminal and type the next command in order to run the program:
+```tex
+git clone https://github.com/javierbotero/tic-tac-toe-game.git
+```
 
-```ruby
+1. Make sure you have already installed [Ruby](https://www.theodinproject.com/courses/web-development-101/lessons/installing-ruby),
+2. After cloning the project open the command line and navigate to the cloned folder to run the game by the following command:
+
+```tex
 ./bin/main.rb
 ```
+
 ## Authors
 
 👤 **Zakariae El Mejdki**
