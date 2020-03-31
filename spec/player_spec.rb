@@ -3,11 +3,11 @@ require './lib/player'
 RSpec.describe Player do
   context 'Create player instances' do
     it 'raise an ArgumentError if an integer was given' do
-      expect {Player.new('23', 'X')}.to raise_error(ArgumentError, 'you can\'t have an Integer as name')
+      expect { Player.new('23', 'X') }.to raise_error(ArgumentError, 'you can\'t have an Integer as name')
     end
 
     it 'raise an ArgumentError if a short name was given' do
-      expect {Player.new('zac', 'O')}.to raise_error(ArgumentError, 'A name should at least contain 4 letters')
+      expect { Player.new('zac', 'O') }.to raise_error(ArgumentError, 'A name should at least contain 4 letters')
     end
 
     it 'make sure that an object is create with no errors' do
