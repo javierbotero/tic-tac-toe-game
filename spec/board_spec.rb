@@ -10,7 +10,7 @@ RSpec.describe Board do
     end
   end
 
-  context '#add_marker' do
+  describe '#add_marker' do
     it 'raise an ArgumentError if we tried to add a marker in the same index multiple times' do
       board.add_marker('X', 1)
       expect { board.add_marker('X', 1) }.to raise_error(ArgumentError, 'Error: Square already filled, try again')
@@ -22,7 +22,7 @@ RSpec.describe Board do
     end
   end
 
-  context '#winner' do
+  describe '#winner' do
     it 'Checks if a row is completed with one same letter' do
       board.add_marker('X', 1)
       board.add_marker('X', 2)

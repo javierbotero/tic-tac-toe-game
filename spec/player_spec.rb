@@ -15,10 +15,10 @@ RSpec.describe Player do
     end
   end
 
-  context '#inc_score' do
-    it 'return a valid number of increments' do
-      player = Player.new('Zack', 'O')
+  describe '#inc_score' do
+    let(:player) { Player.new('Zack', 'O') }
 
+    it 'return a valid number of increments' do
       player.inc_score
       player.inc_score
       player.inc_score
