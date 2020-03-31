@@ -59,6 +59,7 @@ def no_winner?(game, player_x, player_o)
     display_board(game)
 
     winner = game.winner
+    puts winner
     if winner
       puts winner == player_x.symbol ? display_score(player_x, player_o) : display_score(player_o, player_x)
 

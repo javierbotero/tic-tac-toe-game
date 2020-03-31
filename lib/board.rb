@@ -16,15 +16,26 @@ class Board
 
   def winner
     i = 0
+    j = 0
 
     while i < @board.length
       row_check = @board[i] == @board[i + 1] && @board[i + 1] == @board[i + 2]
-      column_check = @board[i] == @board[i + 3] && @board[i + 3] == @board[i + 6]
 
-      if row_check || column_check
+      if row_check
         return @board[i] unless @board[i].empty?
       end
+
       i += 3
+    end
+
+    while j < @board.length
+      column_check = @board[j] == @board[j + 3] && @board[j + 3] == @board[j + 6]
+
+      if column_check
+        return @board[j] unless @board[j].empty?
+      end
+
+      j += 1
     end
 
     back_diagonal = @board[0] == @board[4] && @board[4] == @board[8]
