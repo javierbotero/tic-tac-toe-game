@@ -2,7 +2,7 @@
 require './lib/board'
 require './lib/player'
 
-def user_input(player, game)
+def read_user_input(player, game)
   puts "please #{player.name} choose the square that you want to put your mark in:"
   loop do
     user_choice = gets.chomp.to_i
@@ -51,9 +51,9 @@ def no_winner?(game, player_x, player_o)
 
   while game_on
     if number.even?
-      user_input(player_x, game)
+      read_user_input(player_x, game)
     else
-      user_input(player_o, game)
+      read_user_input(player_o, game)
     end
 
     display_board(game)
