@@ -51,7 +51,7 @@ RSpec.describe Board do
       expect(board.winner).to eql(false)
     end
 
-    it 'Checks if there is no winner when the full board is ful and none line with same letter' do      
+    it 'Checks if there is no winner when the full board is ful and none line with same letter' do
       board.add_marker('X', 1)
       board.add_marker('O', 2)
       board.add_marker('X', 3)

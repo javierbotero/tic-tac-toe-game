@@ -6,7 +6,7 @@ class Board
   end
 
   def add_marker(symbol, index)
-    raise ArgumentError, 'Error: Square already filled, try again' unless @board[index - 1].empty?    
+    raise ArgumentError, 'Error: Square already filled, try again' unless @board[index - 1].empty?
 
     @board[index - 1] = symbol
   end
