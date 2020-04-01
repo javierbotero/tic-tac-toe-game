@@ -52,15 +52,15 @@ RSpec.describe Board do
     end
 
     it 'Checks if there is no winner when the full board is ful and none line with same letter' do
+      board.add_marker('X', 3)
+      board.add_marker('O', 5)
       board.add_marker('X', 1)
       board.add_marker('O', 2)
-      board.add_marker('X', 3)
-      board.add_marker('O', 4)
-      board.add_marker('O', 5)
       board.add_marker('X', 6)
       board.add_marker('O', 7)
-      board.add_marker('X', 8)
+      board.add_marker('X', 4)
       board.add_marker('O', 9)
+      board.add_marker('X', 8)
       expect(board.winner).to_not eql(true)
     end
   end
