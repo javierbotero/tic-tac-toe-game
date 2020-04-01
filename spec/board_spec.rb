@@ -37,7 +37,7 @@ RSpec.describe Board do
       expect(board.winner).to eql('O')
     end
 
-    it 'Checks if a inclined line is completed with one same letter' do
+    it 'Checks if an inclined line is completed with one same letter' do
       board.add_marker('Y', 1)
       board.add_marker('Y', 5)
       board.add_marker('Y', 9)
@@ -49,6 +49,19 @@ RSpec.describe Board do
       board.add_marker('X', 5)
       board.add_marker('O', 9)
       expect(board.winner).to eql(false)
+    end
+
+    it 'Checks if there is no winner when the full board is ful and none line with same letter' do      
+      board.add_marker('X', 1)
+      board.add_marker('O', 2)
+      board.add_marker('X', 3)
+      board.add_marker('O', 4)
+      board.add_marker('O', 5)
+      board.add_marker('X', 6)
+      board.add_marker('O', 7)
+      board.add_marker('X', 8)
+      board.add_marker('O', 9)
+      expect(board.winner).to_not eql(true)
     end
   end
 end
