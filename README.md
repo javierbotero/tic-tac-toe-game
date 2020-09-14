@@ -58,7 +58,7 @@ cd tic-tac-toe-game
 
 - Github: [@javierbotero](/github.com/javierbotero)
 - Twitter: [@javierbotero1](https://twitter.com/JavierBotero1)
-- Linkedin: [Javier Botero](https://www.linkedin.com/in/javier-botero-044686155/)
+- Linkedin: [Javier Botero](https://www.linkedin.com/in/javierboterodev/)
 
 ## 🤝 Contributing
 
